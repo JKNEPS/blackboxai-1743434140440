@@ -1,0 +1,269 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Contact Us | CodeNest</title>
+    <script src="https://cdn.tailwindcss.com"></script>
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0-beta3/css/all.min.css">
+    <link rel="stylesheet" href="styles.css">
+    <style>
+        .form-input:focus {
+            border-color: #4fd1c5;
+            box-shadow: 0 0 0 3px rgba(79, 209, 197, 0.2);
+        }
+        .form-input.error {
+            border-color: #f56565;
+        }
+        .error-message {
+            color: #f56565;
+            font-size: 0.875rem;
+            margin-top: 0.25rem;
+        }
+    </style>
+</head>
+<body class="bg-gray-900 text-white">
+    <!-- Navigation -->
+    <nav class="fixed w-full bg-gray-800 shadow-lg z-10">
+        <div class="max-w-6xl mx-auto px-4">
+            <div class="flex justify-between">
+                <div class="flex space-x-4">
+                    <!-- Logo -->
+                    <div>
+                        <a href="index.html" class="flex items-center py-5 px-2 text-gray-100 hover:text-teal-300">
+                            <i class="fas fa-code text-2xl mr-2 text-teal-400"></i>
+                            <span class="font-bold text-xl">CodeNest</span>
+                        </a>
+                    </div>
+                </div>
+                <!-- Primary Nav -->
+                <div class="hidden md:flex items-center space-x-1">
+                    <a href="index.html" class="py-5 px-3 text-gray-100 hover:text-teal-300">Home</a>
+                    <a href="learn.html" class="py-5 px-3 text-gray-100 hover:text-teal-300">Learn</a>
+                    <a href="tutorials.html" class="py-5 px-3 text-gray-100 hover:text-teal-300">Tutorials</a>
+                    <a href="about.html" class="py-5 px-3 text-gray-100 hover:text-teal-300">About</a>
+                    <a href="contact.html" class="py-5 px-3 text-teal-400 font-medium">Contact</a>
+                </div>
+                <!-- Mobile button -->
+                <div class="md:hidden flex items-center">
+                    <button class="mobile-menu-button p-2 focus:outline-none">
+                        <i class="fas fa-bars text-xl"></i>
+                    </button>
+                </div>
+            </div>
+        </div>
+        <!-- Mobile Menu -->
+        <div class="mobile-menu hidden md:hidden bg-gray-700">
+            <a href="index.html" class="block py-2 px-4 text-sm hover:bg-gray-600">Home</a>
+            <a href="learn.html" class="block py-2 px-4 text-sm hover:bg-gray-600">Learn</a>
+            <a href="tutorials.html" class="block py-2 px-4 text-sm hover:bg-gray-600">Tutorials</a>
+            <a href="about.html" class="block py-2 px-4 text-sm hover:bg-gray-600">About</a>
+            <a href="contact.html" class="block py-2 px-4 text-sm hover:bg-gray-600 text-teal-400">Contact</a>
+        </div>
+    </nav>
+
+    <!-- Main Content -->
+    <main class="pt-32 pb-20 px-4">
+        <div class="max-w-6xl mx-auto">
+            <div class="grid md:grid-cols-2 gap-12">
+                <!-- Contact Form -->
+                <div>
+                    <h1 class="text-3xl font-bold mb-8">Get in Touch</h1>
+                    <form id="contactForm" class="space-y-6">
+                        <div>
+                            <label for="name" class="block text-sm font-medium mb-1">Name</label>
+                            <input type="text" id="name" name="name" class="form-input w-full px-4 py-3 bg-gray-800 border border-gray-700 rounded-lg focus:outline-none transition duration-300" required>
+                            <div id="nameError" class="error-message hidden">Please enter your name</div>
+                        </div>
+                        <div>
+                            <label for="email" class="block text-sm font-medium mb-1">Email</label>
+                            <input type="email" id="email" name="email" class="form-input w-full px-4 py-3 bg-gray-800 border border-gray-700 rounded-lg focus:outline-none transition duration-300" required>
+                            <div id="emailError" class="error-message hidden">Please enter a valid email</div>
+                        </div>
+                        <div>
+                            <label for="subject" class="block text-sm font-medium mb-1">Subject</label>
+                            <select id="subject" name="subject" class="form-input w-full px-4 py-3 bg-gray-800 border border-gray-700 rounded-lg focus:outline-none transition duration-300" required>
+                                <option value="" disabled selected>Select a subject</option>
+                                <option value="general">General Inquiry</option>
+                                <option value="feedback">Feedback</option>
+                                <option value="support">Technical Support</option>
+                                <option value="partnership">Partnership</option>
+                            </select>
+                            <div id="subjectError" class="error-message hidden">Please select a subject</div>
+                        </div>
+                        <div>
+                            <label for="message" class="block text-sm font-medium mb-1">Message</label>
+                            <textarea id="message" name="message" rows="5" class="form-input w-full px-4 py-3 bg-gray-800 border border-gray-700 rounded-lg focus:outline-none transition duration-300" required></textarea>
+                            <div id="messageError" class="error-message hidden">Please enter your message</div>
+                        </div>
+                        <button type="submit" class="w-full bg-teal-500 hover:bg-teal-600 text-white font-bold py-3 px-4 rounded-lg transition duration-300">
+                            Send Message
+                        </button>
+                    </form>
+                </div>
+
+                <!-- Contact Info -->
+                <div>
+                    <h2 class="text-3xl font-bold mb-8">Contact Information</h2>
+                    <div class="space-y-6">
+                        <div class="flex items-start">
+                            <div class="text-teal-400 mr-4 mt-1">
+                                <i class="fas fa-map-marker-alt text-xl"></i>
+                            </div>
+                            <div>
+                                <h3 class="text-lg font-bold mb-1">Our Location</h3>
+                                <p class="text-gray-300">Srijanachowk-8<br>Pokhara, Nepal 33800</p>
+                            </div>
+                        </div>
+                        <div class="flex items-start">
+                            <div class="text-teal-400 mr-4 mt-1">
+                                <i class="fas fa-envelope text-xl"></i>
+                            </div>
+                            <div>
+                                <h3 class="text-lg font-bold mb-1">Email Us</h3>
+                                <p class="text-gray-300">hello@codenest.dev<br>support@codenest.dev</p>
+                            </div>
+                        </div>
+                        <div class="flex items-start">
+                            <div class="text-teal-400 mr-4 mt-1">
+                                <i class="fas fa-phone-alt text-xl"></i>
+                            </div>
+                            <div>
+                                <h3 class="text-lg font-bold mb-1">Call Us</h3>
+                                <p class="text-gray-300">+1 (555) 123-4567<br>Mon-Fri, 9am-5pm PST</p>
+                            </div>
+                        </div>
+                    </div>
+
+                    <div class="mt-12">
+                        <h3 class="text-xl font-bold mb-4">Follow Us</h3>
+                        <div class="flex space-x-4">
+                            <a href="#" class="w-10 h-10 flex items-center justify-center bg-gray-800 rounded-full text-teal-400 hover:bg-teal-500 hover:text-white transition duration-300">
+                                <i class="fab fa-twitter text-lg"></i>
+                            </a>
+                            <a href="#" class="w-10 h-10 flex items-center justify-center bg-gray-800 rounded-full text-teal-400 hover:bg-teal-500 hover:text-white transition duration-300">
+                                <i class="fab fa-github text-lg"></i>
+                            </a>
+                            <a href="#" class="w-10 h-10 flex items-center justify-center bg-gray-800 rounded-full text-teal-400 hover:bg-teal-500 hover:text-white transition duration-300">
+                                <i class="fab fa-discord text-lg"></i>
+                            </a>
+                            <a href="#" class="w-10 h-10 flex items-center justify-center bg-gray-800 rounded-full text-teal-400 hover:bg-teal-500 hover:text-white transition duration-300">
+                                <i class="fab fa-youtube text-lg"></i>
+                            </a>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </main>
+
+    <!-- Footer -->
+    <footer class="footer-black py-12 px-4">
+        <div class="max-w-6xl mx-auto">
+            <div class="grid md:grid-cols-4 gap-8">
+                <div>
+                    <h3 class="text-xl font-bold mb-4 text-teal-400">CodeNest</h3>
+                    <p class="text-gray-300">Your gateway to mastering web development fundamentals.</p>
+                </div>
+                <div>
+                    <h4 class="text-lg font-bold mb-4">Quick Links</h4>
+                    <ul class="space-y-2">
+                        <li><a href="index.html" class="text-gray-300 hover:text-teal-400">Home</a></li>
+                        <li><a href="learn.html" class="text-gray-300 hover:text-teal-400">Learn</a></li>
+                        <li><a href="tutorials.html" class="text-gray-300 hover:text-teal-400">Tutorials</a></li>
+                    </ul>
+                </div>
+                <div>
+                    <h4 class="text-lg font-bold mb-4">Resources</h4>
+                    <ul class="space-y-2">
+                        <li><a href="#" class="text-gray-300 hover:text-teal-400">Cheat Sheets</a></li>
+                        <li><a href="#" class="text-gray-300 hover:text-teal-400">Code Examples</a></li>
+                        <li><a href="#" class="text-gray-300 hover:text-teal-400">References</a></li>
+                    </ul>
+                </div>
+                <div>
+                    <h4 class="text-lg font-bold mb-4">Connect</h4>
+                    <div class="flex justify-center space-x-6">
+                        <a href="#" class="social-icon"><i class="fab fa-facebook"></i></a>
+                        <a href="#" class="social-icon"><i class="fab fa-instagram"></i></a>
+                        <a href="#" class="social-icon"><i class="fab fa-tiktok"></i></a>
+                        <a href="#" class="social-icon"><i class="fab fa-twitter"></i></a>
+                    </div>
+                </div>
+            </div>
+            <div class="border-t border-gray-700 mt-8 pt-8 text-center">
+
+    <script>
+        // Mobile menu toggle
+        const btn = document.querySelector('.mobile-menu-button');
+        const menu = document.querySelector('.mobile-menu');
+
+        btn.addEventListener('click', () => {
+            menu.classList.toggle('hidden');
+        });
+
+        // Form validation
+        const contactForm = document.getElementById('contactForm');
+        
+        contactForm.addEventListener('submit', function(e) {
+            e.preventDefault();
+            let isValid = true;
+            
+            // Validate name
+            const name = document.getElementById('name');
+            const nameError = document.getElementById('nameError');
+            if (name.value.trim() === '') {
+                name.classList.add('error');
+                nameError.classList.remove('hidden');
+                isValid = false;
+            } else {
+                name.classList.remove('error');
+                nameError.classList.add('hidden');
+            }
+            
+            // Validate email
+            const email = document.getElementById('email');
+            const emailError = document.getElementById('emailError');
+            const emailRegex = /^[^\s@]+@[^\s@]+\.[^\s@]+$/;
+            if (!emailRegex.test(email.value)) {
+                email.classList.add('error');
+                emailError.classList.remove('hidden');
+                isValid = false;
+            } else {
+                email.classList.remove('error');
+                emailError.classList.add('hidden');
+            }
+            
+            // Validate subject
+            const subject = document.getElementById('subject');
+            const subjectError = document.getElementById('subjectError');
+            if (subject.value === '') {
+                subject.classList.add('error');
+                subjectError.classList.remove('hidden');
+                isValid = false;
+            } else {
+                subject.classList.remove('error');
+                subjectError.classList.add('hidden');
+            }
+            
+            // Validate message
+            const message = document.getElementById('message');
+            const messageError = document.getElementById('messageError');
+            if (message.value.trim() === '') {
+                message.classList.add('error');
+                messageError.classList.remove('hidden');
+                isValid = false;
+            } else {
+                message.classList.remove('error');
+                messageError.classList.add('hidden');
+            }
+            
+            // If form is valid, show success message
+            if (isValid) {
+                alert('Thank you for your message! We will get back to you soon.');
+                contactForm.reset();
+            }
+        });
+    </script>
+</body>
+</html>
