@@ -1,0 +1,236 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Tutorials | CodeNest</title>
+    <script src="https://cdn.tailwindcss.com"></script>
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0-beta3/css/all.min.css">
+    <link rel="stylesheet" href="styles.css">
+    <style>
+        .tutorial-card:hover .card-overlay {
+            opacity: 1;
+            transform: translateY(0);
+        }
+        .card-overlay {
+            transition: all 0.3s ease;
+            opacity: 0;
+            transform: translateY(10px);
+        }
+    </style>
+</head>
+<body class="bg-gray-900 text-white">
+    <!-- Navigation -->
+    <nav class="fixed w-full bg-gray-800 shadow-lg z-10">
+        <div class="max-w-6xl mx-auto px-4">
+            <div class="flex justify-between">
+                <div class="flex space-x-4">
+                    <!-- Logo -->
+                    <div>
+                        <a href="index.html" class="flex items-center py-5 px-2 text-gray-100 hover:text-teal-300">
+                            <i class="fas fa-code text-2xl mr-2 text-teal-400"></i>
+                            <span class="font-bold text-xl">CodeNest</span>
+                        </a>
+                    </div>
+                </div>
+                <!-- Primary Nav -->
+                <div class="hidden md:flex items-center space-x-1">
+                    <a href="index.html" class="py-5 px-3 text-gray-100 hover:text-teal-300">Home</a>
+                    <a href="learn.html" class="py-5 px-3 text-gray-100 hover:text-teal-300">Learn</a>
+                    <a href="tutorials.html" class="py-5 px-3 text-teal-400 font-medium">Tutorials</a>
+                    <a href="about.html" class="py-5 px-3 text-gray-100 hover:text-teal-300">About</a>
+                    <a href="contact.html" class="py-5 px-3 text-gray-100 hover:text-teal-300">Contact</a>
+                </div>
+                <!-- Mobile button -->
+                <div class="md:hidden flex items-center">
+                    <button class="mobile-menu-button p-2 focus:outline-none">
+                        <i class="fas fa-bars text-xl"></i>
+                    </button>
+                </div>
+            </div>
+        </div>
+        <!-- Mobile Menu -->
+        <div class="mobile-menu hidden md:hidden bg-gray-700">
+            <a href="index.html" class="block py-2 px-4 text-sm hover:bg-gray-600">Home</a>
+            <a href="learn.html" class="block py-2 px-4 text-sm hover:bg-gray-600">Learn</a>
+            <a href="tutorials.html" class="block py-2 px-4 text-sm hover:bg-gray-600 text-teal-400">Tutorials</a>
+            <a href="about.html" class="block py-2 px-4 text-sm hover:bg-gray-600">About</a>
+            <a href="contact.html" class="block py-2 px-4 text-sm hover:bg-gray-600">Contact</a>
+        </div>
+    </nav>
+
+    <!-- Main Content -->
+    <main class="pt-32 pb-20 px-4">
+        <div class="max-w-6xl mx-auto">
+            <h1 class="text-4xl font-bold mb-12 text-center">Interactive Tutorials</h1>
+            
+            <!-- Tutorial Categories -->
+            <div class="mb-16">
+                <h2 class="text-2xl font-bold mb-6 text-teal-400">HTML Tutorials</h2>
+                <div class="grid md:grid-cols-3 gap-8">
+                    <!-- Tutorial Card 1 -->
+                    <div class="tutorial-card bg-gray-800 rounded-lg overflow-hidden shadow-lg relative">
+                        <img src="https://images.pexels.com/photos/270404/pexels-photo-270404.jpeg" alt="HTML Basics" class="w-full h-48 object-cover">
+                        <div class="p-6">
+                            <h3 class="text-xl font-bold mb-2">HTML Fundamentals</h3>
+                            <p class="text-gray-300 mb-4">Learn the building blocks of web development with this comprehensive HTML tutorial.</p>
+                            <div class="flex justify-between items-center">
+                                <span class="text-sm text-teal-400">Beginner</span>
+                                <span class="text-sm text-gray-400">15 min</span>
+                            </div>
+                        </div>
+                        <div class="card-overlay absolute inset-0 bg-black bg-opacity-70 flex items-center justify-center">
+                            <a href="#" class="bg-teal-500 hover:bg-teal-600 text-white font-bold py-2 px-4 rounded transition duration-300">Start Tutorial</a>
+                        </div>
+                    </div>
+
+                    <!-- Tutorial Card 2 -->
+                    <div class="tutorial-card bg-gray-800 rounded-lg overflow-hidden shadow-lg relative">
+                        <img src="https://images.pexels.com/photos/1591061/pexels-photo-1591061.jpeg" alt="HTML Forms" class="w-full h-48 object-cover">
+                        <div class="p-6">
+                            <h3 class="text-xl font-bold mb-2">HTML Forms</h3>
+                            <p class="text-gray-300 mb-4">Master form creation and validation to collect user input effectively.</p>
+                            <div class="flex justify-between items-center">
+                                <span class="text-sm text-teal-400">Intermediate</span>
+                                <span class="text-sm text-gray-400">25 min</span>
+                            </div>
+                        </div>
+                        <div class="card-overlay absolute inset-0 bg-black bg-opacity-70 flex items-center justify-center">
+                            <a href="#" class="bg-teal-500 hover:bg-teal-600 text-white font-bold py-2 px-4 rounded transition duration-300">Start Tutorial</a>
+                        </div>
+                    </div>
+
+                    <!-- Tutorial Card 3 -->
+                    <div class="tutorial-card bg-gray-800 rounded-lg overflow-hidden shadow-lg relative">
+                        <img src="https://images.pexels.com/photos/177598/pexels-photo-177598.jpeg" alt="Semantic HTML" class="w-full h-48 object-cover">
+                        <div class="p-6">
+                            <h3 class="text-xl font-bold mb-2">Semantic HTML</h3>
+                            <p class="text-gray-300 mb-4">Learn how to structure your content for better accessibility and SEO.</p>
+                            <div class="flex justify-between items-center">
+                                <span class="text-sm text-teal-400">Intermediate</span>
+                                <span class="text-sm text-gray-400">20 min</span>
+                            </div>
+                        </div>
+                        <div class="card-overlay absolute inset-0 bg-black bg-opacity-70 flex items-center justify-center">
+                            <a href="#" class="bg-teal-500 hover:bg-teal-600 text-white font-bold py-2 px-4 rounded transition duration-300">Start Tutorial</a>
+                        </div>
+                    </div>
+                </div>
+            </div>
+
+            <!-- CSS Tutorials Section -->
+            <div class="mb-16">
+                <h2 class="text-2xl font-bold mb-6 text-teal-400">CSS Tutorials</h2>
+                <div class="grid md:grid-cols-3 gap-8">
+                    <!-- Tutorial Card 4 -->
+                    <div class="tutorial-card bg-gray-800 rounded-lg overflow-hidden shadow-lg relative">
+                        <img src="https://images.pexels.com/photos/256502/pexels-photo-256502.jpeg" alt="CSS Basics" class="w-full h-48 object-cover">
+                        <div class="p-6">
+                            <h3 class="text-xl font-bold mb-2">CSS Fundamentals</h3>
+                            <p class="text-gray-300 mb-4">Learn how to style your HTML elements with basic CSS properties.</p>
+                            <div class="flex justify-between items-center">
+                                <span class="text-sm text-teal-400">Beginner</span>
+                                <span class="text-sm text-gray-400">18 min</span>
+                            </div>
+                        </div>
+                        <div class="card-overlay absolute inset-0 bg-black bg-opacity-70 flex items-center justify-center">
+                            <a href="#" class="bg-teal-500 hover:bg-teal-600 text-white font-bold py-2 px-4 rounded transition duration-300">Start Tutorial</a>
+                        </div>
+                    </div>
+
+                    <!-- Tutorial Card 5 -->
+                    <div class="tutorial-card bg-gray-800 rounded-lg overflow-hidden shadow-lg relative">
+                        <img src="https://images.pexels.com/photos/11035471/pexels-photo-11035471.jpeg" alt="Flexbox" class="w-full h-48 object-cover">
+                        <div class="p-6">
+                            <h3 class="text-xl font-bold mb-2">Flexbox Layout</h3>
+                            <p class="text-gray-300 mb-4">Master modern layout techniques with CSS Flexbox.</p>
+                            <div class="flex justify-between items-center">
+                                <span class="text-sm text-teal-400">Intermediate</span>
+                                <span class="text-sm text-gray-400">30 min</span>
+                            </div>
+                        </div>
+                        <div class="card-overlay absolute inset-0 bg-black bg-opacity-70 flex items-center justify-center">
+                            <a href="#" class="bg-teal-500 hover:bg-teal-600 text-white font-bold py-2 px-4 rounded transition duration-300">Start Tutorial</a>
+                        </div>
+                    </div>
+
+                    <!-- Tutorial Card 6 -->
+                    <div class="tutorial-card bg-gray-800 rounded-lg overflow-hidden shadow-lg relative">
+                        <img src="https://images.pexels.com/photos/577585/pexels-photo-577585.jpeg" alt="CSS Grid" class="w-full h-48 object-cover">
+                        <div class="p-6">
+                            <h3 class="text-xl font-bold mb-2">CSS Grid</h3>
+                            <p class="text-gray-300 mb-4">Create complex layouts with the powerful CSS Grid system.</p>
+                            <div class="flex justify-between items-center">
+                                <span class="text-sm text-teal-400">Advanced</span>
+                                <span class="text-sm text-gray-400">35 min</span>
+                            </div>
+                        </div>
+                        <div class="card-overlay absolute inset-0 bg-black bg-opacity-70 flex items-center justify-center">
+                            <a href="#" class="bg-teal-500 hover:bg-teal-600 text-white font-bold py-2 px-4 rounded transition duration-300">Start Tutorial</a>
+                        </div>
+                    </div>
+                </div>
+            </div>
+
+            <!-- Call to Action -->
+            <div class="text-center">
+                <h2 class="text-2xl font-bold mb-6">Ready to start coding?</h2>
+                <a href="learn.html" class="inline-block bg-teal-500 hover:bg-teal-600 text-white font-bold py-3 px-6 rounded-lg text-lg transition duration-300">
+                    Begin Learning Journey
+                </a>
+            </div>
+        </div>
+    </main>
+
+    <!-- Footer -->
+    <footer class="footer-black py-12 px-4">
+        <div class="max-w-6xl mx-auto">
+            <div class="grid md:grid-cols-4 gap-8">
+                <div>
+                    <h3 class="text-xl font-bold mb-4 text-teal-400">CodeNest</h3>
+                    <p class="text-gray-300">Your gateway to mastering web development fundamentals.</p>
+                </div>
+                <div>
+                    <h4 class="text-lg font-bold mb-4">Quick Links</h4>
+                    <ul class="space-y-2">
+                        <li><a href="index.html" class="text-gray-300 hover:text-teal-400">Home</a></li>
+                        <li><a href="learn.html" class="text-gray-300 hover:text-teal-400">Learn</a></li>
+                        <li><a href="tutorials.html" class="text-gray-300 hover:text-teal-400">Tutorials</a></li>
+                    </ul>
+                </div>
+                <div>
+                    <h4 class="text-lg font-bold mb-4">Resources</h4>
+                    <ul class="space-y-2">
+                        <li><a href="#" class="text-gray-300 hover:text-teal-400">Cheat Sheets</a></li>
+                        <li><a href="#" class="text-gray-300 hover:text-teal-400">Code Examples</a></li>
+                        <li><a href="#" class="text-gray-300 hover:text-teal-400">References</a></li>
+                    </ul>
+                </div>
+                <div>
+                    <h4 class="text-lg font-bold mb-4">Connect</h4>
+                    <div class="flex justify-center space-x-6">
+                        <a href="#" class="social-icon"><i class="fab fa-facebook"></i></a>
+                        <a href="#" class="social-icon"><i class="fab fa-instagram"></i></a>
+                        <a href="#" class="social-icon"><i class="fab fa-tiktok"></i></a>
+                        <a href="#" class="social-icon"><i class="fab fa-twitter"></i></a>
+                    </div>
+                </div>
+            </div>
+            <div class="border-t border-gray-700 mt-8 pt-8 text-center">
+                <p class="text-gray-400">&copy; 2023 CodeNest. All rights reserved.</p>
+                <p class="developer-credit">Developed By Jenish Sapkota</p>
+            </div>
+        </div>
+    </footer>
+
+    <script>
+        // Mobile menu toggle
+        const btn = document.querySelector('.mobile-menu-button');
+        const menu = document.querySelector('.mobile-menu');
+
+        btn.addEventListener('click', () => {
+            menu.classList.toggle('hidden');
+        });
+    </script>
+</body>
+</html>
